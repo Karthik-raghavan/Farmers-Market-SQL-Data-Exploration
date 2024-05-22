@@ -104,4 +104,40 @@ ORDER BY
 	`Quantity Average` DESC;
     
 
-    
+SELECT Transaction_Year, AVG(quantity) AS `Avg Quantity`
+FROM (
+SELECT EXTRACT(YEAR FROM market_date) AS `Transaction_Year`, quantity FROM customer_purchases
+) AS `T`
+GROUP BY Transaction_Year
+ORDER BY `Avg Quantity` DESC;
+
+# Find the average quantity sold in each month
+
+SELECT 
+	EXTRACT(YEAR FROM market_date) AS `Year`,
+	EXTRACT(MONTH FROM market_date) AS `Month`, 
+    ROUND(AVG(quantity),1) AS `Avg Quantity`, 
+    MAX(quantity) AS `Max Quantity`,
+    MIN(quantity) AS `Min Quantity`,
+    COUNT(quantity) AS `Count Quantity`
+FROM customer_purchases
+GROUP BY EXTRACT(YEAR FROM market_date),EXTRACT(MONTH FROM market_date)
+ORDER BY Year DESC, Month DESC;
+
+# Display all results from the above table where the number of bills is above 100
+
+SELECT 
+	EXTRACT(YEAR FROM market_date) AS `Year`,
+	EXTRACT(MONTH FROM market_date) AS `Month`, 
+    ROUND(AVG(quantity),1) AS `Avg Quantity`, 
+    MAX(quantity) AS `Max Quantity`,
+    MIN(quantity) AS `Min Quantity`,
+    COUNT(quantity) AS `Count Quantity`
+FROM customer_purchases
+GROUP BY EXTRACT(YEAR FROM market_date),EXTRACT(MONTH FROM market_date)
+HAVING `Count Quantity` > 100
+ORDER BY Year DESC, Month DESC;
+
+# For filtering group table, we use HAVING 
+# We can filter using aggregate values in HAVING unlike WHERE
+

@@ -40,6 +40,9 @@
     * Grouping / Categorizing
         * CASE Function
     * GROUP BY
+    * HAVING
+    * JOINS
+        
     * Window Functions
         * Aggregating Functions
             * COUNT
