@@ -4,6 +4,7 @@
  
 * From Basic SQL Queries to Advanced 
     * SELECT
+        * DISTINCT
     * FROM
     * ORDER BY
     * LIMIT
@@ -25,13 +26,17 @@
     * Numerical Functions
         * ROUND
     * Date Functions
-        * Extract
+        * Extract Date and Time Components
             * Year
             * Month
             * Day
             * Hour
             * Minute
             * Second
+        * Current Date and Time
+        * Add/Subtract Date
+        * Difference between 2 dates
+        * Formatting Date
     * IF Function
     * Subquery
         * Single Value
@@ -42,14 +47,43 @@
     * GROUP BY
     * HAVING
     * JOINS
-        
+        * INNER JOIN
+        * LEFT JOIN
+        * RIGHT JOIN
+        * CROSS JOIN
+        * SELF JOIN
+    * UNION
+        * ALL
+        * DISTINCT
     * Window Functions
+        * OVER
+            * PARTITION BY
+            * ORDER BY
+            * Sliding Window Frames
+                * ROWS BETWEEN
+                * PRECEDING
+                * FOLLOWING
+                * UNBOUNDED
+                * BOUNDED
+                * CURRENT ROW
         * Aggregating Functions
             * COUNT
             * SUM
             * AVG
             * MAX
             * MIN
+        * Ranking Functions/Analytic Functions
+            * RANK
+            * DENSE_RANK
+            * ROW_NUMBER
+            * NTILE
+        * Value Extraction (Functions that pick a value from a column)
+            * FIRST_VALUE
+            * LEAD
+            * LAG
+            * NTH_VALUE
+    * CTE
+    * Views
 
     
         
@@ -59,8 +93,13 @@
 * Basic SQL Queries.sql
 * SQL Queries with Functions.sql
 * SQL Queries with Sub Query.sql
-* 
-
+* SQL Queries using Windows Functions.sql
+* teams.sql
+* Union.sql
+* SQL Queries with Group By.sql
+* SQL Queries with Joins.sql
+* SQL Queries using Date and Time Functions.sql
+* SQL Queries using CTE and Views.sql
 
 ## Instructions
 
