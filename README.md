@@ -82,7 +82,7 @@
             * LEAD
             * LAG
             * NTH_VALUE
-    * CTE
+    * CTE (Common Table Expression)
     * Views
 
     
